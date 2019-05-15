@@ -106,8 +106,8 @@ int main()
        //svm->setGamma(3);
        svm->setTermCriteria(TermCriteria(TermCriteria::MAX_ITER, 100, 1e-6));
 
-       Ptr<ml::TrainData> tData = ml::TrainData::create(trainingDataMat, ml::SampleTypes::ROW_SAMPLE, labelsMat);
-       svm->train(tData);
+       //Ptr<ml::TrainData> tData = ml::TrainData::create(trainingDataMat, ml::SampleTypes::ROW_SAMPLE, labelsMat);
+       //svm->train(tData);
        svm->train( trainingDataMat , ml::ROW_SAMPLE , labelsMat );
 
        srcImg = Mat(240,240, CV_8UC3, Scalar(255,255,255));
